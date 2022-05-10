@@ -12,37 +12,25 @@
 .header {
   background-color: lightgreen;
   height: 11%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   padding: 0px 10px;
-  font-size: 2vw;
+  
 }
 
 .header__logo {
-  font-size: 4vw;
+  font-size: 40px;
   font-family: serif;
   text-align: center;
 }
 
 .header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+ flex-direction: row;
   gap: 5rem;
+  font-size: 25px;
 }
 
 .header__menu-1 a, .header__menu-2 a, .header__menu-3 a {
@@ -51,44 +39,31 @@
 }
 
 .header__menu-1 a:hover, .header__menu-2 a:hover, .header__menu-3 a:hover {
-  color: blueviolet;
+  
   background-color: black;
   color: white;
-  border: 1px  solid black;
-  border-radius: 35px;
-  padding: 10px;
-  font-size: 2.1rem;
+  border-radius: 15px;
+  padding: 5px;
+  font-size: 1.5rem;
 }
 
 .main__photos {
   background-color: black;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   width: 100%;
 }
 
 .photos {
   width: 98.999%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .photos__row-1, .photos__row-2, .photos__row-3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .photo {
@@ -96,4 +71,146 @@
   image-rendering: optimizeQuality;
   width: 99%;
 }
-/*# sourceMappingURL=styles.css.map */
+
+@media (max-width:768px) {
+
+  .header__logo {
+    font-size: 35px;
+  }
+
+  .header__menu {
+    gap:3rem
+  }
+  .header__menu-1 a, .header__menu-2 a, .header__menu-3 a {
+    font-size: 20px;
+    
+  }
+  .footer__copyright p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:680px) {
+
+  .header__logo {
+    font-size: 25px;
+  }
+
+  .header__menu {
+    gap:1rem
+  }
+  .header__menu-1 a, .header__menu-2 a, .header__menu-3 a {
+    font-size: 20px;
+    
+  }
+  .footer__copyright p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:480px) {
+
+  .header {
+      gap: 30px;
+
+  }
+  .header__logo {
+    font-size: 25px;
+  }
+
+  .header__menu {
+    gap:1rem;
+  }
+  .header__menu-1 a, .header__menu-2 a, .header__menu-3 a {
+    font-size: 20px;
+    
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__media {
+    justify-content: space-between;
+  }
+   
+  .photos {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+}
+
+@media (max-width:406px) {
+
+
+
+  
+  .header {
+    height: 10%;
+    justify-content: space-between;
+    margin: 0px;
+    gap: 0px;
+  }
+  .header__logo {
+    font-size: 20px;
+    padding: 30px;
+    margin: 0px;
+    
+  }
+
+  .header__menu {
+   gap:15px;
+    
+  }
+  .header__menu-1 a, .header__menu-2 a, .header__menu-3 a {
+    font-size: 15px;
+    
+  }
+
+  .footer__copyright{
+    display: none;
+  }
+   
+  .photos {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+}
+
+@media (max-width:370px) {
+
+
+
+  
+  .header {
+    height: 10%;
+    justify-content: center;
+    margin: 0px;
+   
+  }
+  .header__logo {
+    font-size: 35px;
+    align-self: center;
+   
+  }
+
+  .header__menu {
+   display: none;
+    
+  }
+  .header__menu-1 a, .header__menu-2 a, .header__menu-3 a {
+    font-size: 15px;
+    
+  }
+
+  .footer__copyright{
+    display: none;
+  }
+   
+  .photos {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+}
